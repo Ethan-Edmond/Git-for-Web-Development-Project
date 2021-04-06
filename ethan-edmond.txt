@@ -1,1 +1,264 @@
 https://codepen.io/ethan-edmond/pen/RwKZBGR
+
+1. What is Semantic HTML?
+
+	html with inherit meaning. I could swap h2 and h1 tags in html, then use css to make it look like the original, but that would be against the meaning of h1 and h2.
+
+2. What is HTML used for?
+
+	html is used for structuring the content.
+
+3. What is an attribute and where do we put it?
+
+	an attribute is value that can be assigned to an html tag.
+	it looks like this:
+	<tag attribute="value"></tag>
+
+4. What is the h1 tag used for? How many times should I use it on a page?
+
+	The h1 tag is used for the main header of the page. it should only be used once.
+
+5. Name two tags that have required attributes
+
+	img requires the src attribute, and a requires an href attribute
+
+6. What do we put in the head of our HTML document?
+
+	links to the stylesheets, links to our fonts, metadata stuff, which encoding information we're using.
+
+7. What is an id?
+
+	an id is a unique identifier that can be assigned to one element.
+
+8. What elements can I add an id to?
+
+	I can't think of any elements that you couldn't add an id to.
+	oh, nevermind, after looking it up, it seems like you can't add ids or classes to elements found in the head.
+
+9. How many times can I use the same id on a page?
+
+	exactly once, it's supposed to be unique.
+
+10. What is a class?
+
+	a class is an identifier that can be assigned to multiple elements.
+
+11. What elements can I add a class to?
+
+	everything but base, basefont, head and the elements found in head, param and html
+
+12. How many times can I use the same class on a page?
+
+	how many elements do you have? go crazy.
+
+13. How do I get my link to open in a new tab?
+
+	add the target attribute with the value "_blank"
+
+14. What is the alt attribute in the image tag used for?
+
+	if the image doesn't load, it gives a description of what the image is supposed to be. it helps increase accessibility.
+
+15. How do I reference an id?
+
+	in css you would reference an id with a pound sign or hash or whatever that thing is.
+	like this:
+	#id {
+		properties
+	}
+
+16. What is the difference between a section and a div
+
+	sections are supposed to be used to define separate sections of your site. otherwise they're the same. you could use them interchangably, but don't that's gross.
+
+17. What is CSS used for?
+
+	css is to style the html and make it snazzy
+
+18. How to we select an element? Example - every h2 on the page
+
+	h2 {
+		properties: values;
+	}
+19. What is the difference between a class and an id? - Give me an example of when I might use each one
+
+	class are for categories of things and can be used multiple times. ids are for single things and can only be used once.
+
+	<div class="one-third">
+	</div>
+	<div class="one-third">
+	</div>
+	<div class="one-third">
+	</div>
+	could be used to make a cool layout with classes.
+
+	<h2 id="starting-title"></h2>
+	<p id="some-content"></p>
+	<p id="very-different-content"></p>
+	maybe you should use ids to make things different from each other?
+	
+20. How do we select classes in CSS?
+
+	you select a class with a .
+	like this:
+	.class {
+		props: vals;
+	}
+
+21. How do we select a p element with a single class of “human””?
+
+	you select an specific element of a specific class with element.class
+	like this:
+	p.human {
+		propellor: val kilmer;
+	}
+
+22. What is a parent child selector? When would this be useful?
+
+	a parent child selector is a selector which selects all of the specified children element in the specified parent element.
+	This is useful when you want to change all of the things in some element.
+	<div id="container">
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</div>
+	This seems like a good spot for it.
+
+23. How do you select all links within a div with the class of sidebar?
+
+	does the div have the class? then:
+	div.sidebar a {
+		propapa: valalala;
+	}
+	do the links have the class? then:
+	div a.sidebar{
+		pralue: voperty;
+	}
+
+24. What is a pseudo selector?
+
+	A pseudo selector is used to style elements in certain events, like hover.
+
+25. What do we use the change the spacing between lines?
+
+	the line-spacing property works pretty well for that.
+
+26. What do we use to change the spacing between letters?
+
+	the letter-spacing property does the job.
+
+27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+
+	have you tried changing the text-transform property?
+
+28. How do I add a 1px border around my div that is dotted and black?
+
+	try:
+	elem {
+		border: 1px dotted black;
+	}
+
+29. How do I select everything on the page?
+
+	* {
+		prooo: vaaaa;
+	}
+
+30. How do I write a comment in CSS?
+
+	/* comment */
+	/*
+	oh wow it works multi-line
+	*/
+
+31. How do I find out what file I am in, when I am using the command line?
+
+	you can't be in a file on the command line, just directories *snobbish harumph*.
+	wait no, I was just kidding, no don't banish me AAAAaaaa...
+	pwd can be used to find which directory
+	like so:
+	pwd
+	--> rightHere
+
+32. Using the command line - how do I see a list of files/folders in my current folder?
+
+	ls lists all the stuff in your directory, you can even use it to look in other directories.
+	like so:
+	ls
+	--> aDir aFile
+	ls aDir
+	--> fileInDir
+	ls ..
+	--> rightHere
+	
+33. How do I remove a file via the command line? Why do I have to be careful with this?
+
+	rm removes files and folders
+	you should be careful because it doesn't ask if you're sure, it usually happens so fast that you can't stop it, and if you use it wrong you can really do some damage.
+
+34. Why should I use version control?
+
+	
+35. How often should I commit to github?
+
+	are you at a stopping point? commit
+	would you not be able to describe your commit in a 50 character commit message if you kept going? commit
+	did you just do something that would be annoying to do again? commit
+	has it been a bit since you last did a commit? commit
+	commit often, but don't commit every letter or be annoying about it
+
+36. What is the command we would use to push our repo up to github?
+
+	git push -u origin my-branch
+	the -u sets where to push in the future, so you only need to do that part once
+	
+37. Walk me through Lambda's git flow.
+
+	fork it.
+	clone it.
+	branch it.
+	change it.
+	stage it.
+	commit it.
+	push it.
+	pull (request) it.
+
+	or:
+	fork it from lambda to your github account.
+	use git clone to make a local copy.
+	use git checkout to make a separate branch.
+	do some changes.
+	stage those changes with git add
+	commit those changes with git commit, don't forget the commit message.
+	push those changes to your github account with git push.
+	create a pull request to your main branch.
+
+	oh, and try to remember that checkout, add, commit and push all operate on the current directory, so be in the right one with cd
+
+Stretch Questions
+
+1. What is the difference between an inline element and a block element?
+
+	inline elements display inside of blocks of text. block elements display as rectangles on the screen.
+	for ex: span is an inline element, and you can kind of use this as bold or italic in a block of text, but if you tried that with p, they would display as two different blocks of text.
+
+2. What happens when an element is positioned absolutely?
+
+	it's position is measured to the top left corner of the closest positioned parent and can be adjusted with top, left, right or bottom.
+
+3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width?
+
+	you could use min-width and width together. you could use the flexbox model with flex-basis and flex-grow.
+
+4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+
+	block: div, p, h1-6
+	inline: span, a
+	inline-block: had to look this one up, img apparently defaults to inline-block
+
+5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them?
+
+	well, you have margin, border, padding and the content area. padding adds space around the content, border adds space around the padding and margin adds space around the border. padding includes the background, border can be colored or styled, but margin is transparent. generally I would either use box-sizing or some flexbox stuff to fix the widths to work right.
+
