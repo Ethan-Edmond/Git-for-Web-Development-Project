@@ -200,6 +200,7 @@ https://codepen.io/ethan-edmond/pen/RwKZBGR
 
 34. Why should I use version control?
 
+	version control lets you keep every version of a file or set of files, it lets you use the one you want, and it allows you to collaborate with others easier.
 	
 35. How often should I commit to github?
 
