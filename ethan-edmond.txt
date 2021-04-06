@@ -257,7 +257,7 @@ Stretch Questions
 
 	block: div, p, h1-6
 	inline: span, a
-	inline-block: had to look this one up, img apparently defaults to inline-block
+	inline-block: had to look this one up, button apparently defaults to inline-block
 
 5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them?
 
